@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="author" content="William Rodriguez" />
+		<meta name="robots" content="index, follow" />
+
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css')}}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="{{ url_for('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="{{ url_for('about_me')}}">About Me</a></li>
+							<li><a href="{{ url_for('studies')}}">Studies</a></li>
+							<li><a href="{{ url_for('experience')}}">Experience</a></li>
+							<li><a href="#contact">Contact Me</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#one" class="button primary fit">Get Started</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>Hi, my name is William</h1>
+							</header>
+							<div class="content">
+								<p>Thank you very much for visiting my page. I am pleased to share with <br>
+									you my experiences, studies, and knowledge, which will help you gain <br>
+									a clearer understanding of my profile, my strengths, and, why not, <br>
+									also my areas for improvement. Welcome!</p>
+								<ul class="actions">
+									<li><a href="#one" class="button next scrolly">Get Started</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one" class="tiles">
+								<article>
+									<span class="image">
+										<img src="{{url_for('static', filename='assets/images/william.jpg')}}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{{ url_for('about_me') }}" class="link">Who am I?</a></h3>
+										<p>All about me!!</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{{url_for('static', filename='assets/images/fondo_proyects.jpg')}}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{{ url_for('experience') }}" class="link">Experience</a></h3>
+										<p>Section of work experience and functions performed</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{{url_for('static', filename='assets/images/fondo_studies.jpg')}}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{{ url_for('studies') }}" class="link">Studies</a></h3>
+										<p>Studies and knowledge section</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{{url_for('static', filename='assets/images/fondo_app.jpg')}}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{{ url_for('experience')}}#three1" class="link">EDS App</a></h3>
+										<p>EDS App (Smart System for Service Stations)</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{{url_for('static', filename='assets/images/fondo_Back.jpg')}}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{{ url_for('experience')}}#three" class="link">EDS Backend</a></h3>
+										<p>EDS App Backend Robust and Scalable Architecture for Service Stations</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{{url_for('static', filename='assets/images/fondo_java.jpg')}}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{{ url_for('experience')}}#three2" class="link">User and Task</a></h3>
+										<p>Users and Task Microservices</p>
+									</header>
+								</article>
+							</section>
+					</div>
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" required />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" required/>
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6" required></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										{% with message = get_flashed_messages() %}
+										{% if messages %}
+										<div class="alert alert-succes">
+											{% for message in messages %}
+													{{ message }}
+											{% endfor %}
+										</div>
+										{% endif %} {% endwith %}
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="mailto:william.rodriguez1990ti@gmail.com">william.rodriguez1990ti@gmail.com</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>+49 176 206 92 862</span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Address</h3>
+										<span>Bad Waldsee<br />
+										Germany<br />
+										
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons"> 
+								<li><a href="https://www.facebook.com/willi.rodriguezzzz" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://github.com/William0814" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/william-rodríguez-5533901a6" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="http://wa.me/+4917620692862" target="_blank" class="icon brands alt fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; 2025, all rights reserved</li><li>Developed by: <a href="">Ing. William Rodriguez</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>

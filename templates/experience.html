@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Experience</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}"/>
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css')}}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt">
+						<a href="{{ url_for('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="{{ url_for('home')}}">Home</a></li>
+							<li><a href="{{ url_for('about_me')}}">About Me</a></li>
+							<li><a href="{{ url_for('studies')}}">Studies</a></li>
+							<li><a href="{{ url_for('home')}}#contact">Contact Me</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="alt">
+						<div class="inner">
+							<span class="image">
+								<img src="{{ url_for('static', filename='assets/images/fondo_java.jpg')}}" alt="" />
+							</span>
+							<header class="major">
+								<h1>Experience</h1>
+							</header>
+							<div class="content">
+								<p></p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>Dev Projects and Company Experience</h2>
+									</header>
+									<p></p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<a href="https://poliedrosoftware.com/" target="_blank" class="image">
+										<img src="{{ url_for('static', filename='assets/images/poliedro.jpeg')}}" alt="" data-position="center center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Poliedro Software S.A.S</h3>
+											</header>
+											<p>(current) I currently work freelance or on projects with this
+												company as a back-end developer, implementing technologies such as .NET
+												and .NET/MAUI, MySQL, in memory query management with Redis, Docker, AWS,
+												and Azure for deployments. As a project manager, I manage Azure DevOps
+												and Git and Git Extension for version control. The entire product is 
+												built on a hexagonal and microservices architecture for greater quality 
+												control when exposing endpoints. </p>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="https://tae-sas.com/" target="_blank" class="image">
+										<img src="{{ url_for('static', filename='assets/images/tae.png')}}" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Tae Ltda</h3>
+											</header>
+											<p>(05/2023 - 01/2024) A company providing administrative and accounting
+												software for the real estate sector. I worked as a National Support and
+												Implementation Analyst. My responsibilities included: Providing technical
+												support nationwide remotely, by phone, and in person. Registering and
+												managing tickets in the CRM, ensuring quality and customer satisfaction.
+												Monitoring and following up on tickets with low ratings. Coordinating and
+												attending training sessions and service optimization meetings. Performing
+												software updates and maintenance for SIMI®. Managing databases following
+												established protocols. Executing software implementations, ensuring
+												compliance with procedures. Documenting activities and ensuring customer
+												satisfaction after each implementation. Coordinating the resolution of
+												requests, complaints, and suggestions (PQRS) with the relevant areas.</p>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="https://spagrupoinmobiliario.com/" target="_blank" class="image">
+										<img src="{{ url_for('static', filename='assets/images/spa.png')}}" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>SPA real estate group</h3>
+											</header>
+											<p>  (12/2022 - 05/2023) One of the largest real estate companies in Colombia,
+												where I worked as an IT Analyst. My main responsibilities included: Ensuring
+												the functionality and availability of corporate applications. Supporting
+												vendors in the implementation of technology projects. Training users in the
+												use of technological tools. Coordinating the resolution of incidents with
+												suppliers. Evaluating and proposing improvements in IT infrastructure.
+												Overseeing the proper functioning of the company’s website and technological
+												resources. Developing corporate software with Power Platform.</p>
+										</div>
+									</div>
+								</section>
+							
+								<section>
+									<a href="https://rys.com.co/" target="_blank" class="image">
+										<img src="{{ url_for('static', filename='assets/images/rys.jpg')}}" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>R&S Solutions</h3>
+											</header>
+											<p>(11/2020 - 11/2022) A company specializing in technical support, both remote
+												and on-site. For almost two years, my responsibilities included: Computer
+												technical support and maintenance. Software installation and configuration.
+												Network administration and configuration. System maintenance and management.</p>
+										</div>
+									</div>
+								</section>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>EDS App Backend Robust and Scalable Architecture for Service Stations</h2>
+									</header>
+									<p>The backend of <strong>EDS App</strong> is built with <strong>ASP.NET Core</strong>, following a
+										<em>hexagonal architecture</em> that ensures clean, decoupled, and maintainable code.
+										It implements <strong>JWT</strong> for secure token-based authentication and exposes
+										<strong>REST APIs</strong> documented with Swagger.
+									</p>
+									<p>
+										The solution is optimized for production environments using <strong>Redis</strong> for data caching,
+										<strong>Docker</strong> for containerization and portable deployment, and <strong>AWS</strong> as the cloud platform.
+										It also uses <strong>GitHub Actions</strong> to automate CI/CD pipelines.
+										All development and orchestration are managed through <strong>Visual Studio</strong>,
+										providing high productivity and full control over the development lifecycle.
+									</p>
+
+									<h3 style="color: #2980b9;">Key Technologies</h3>
+									<ul>
+										<strong>Core Framework:</strong> ASP.NET Core <br>
+										<strong>Security:</strong> JWT token-based authentication <br>
+										<strong>API Documentation:</strong> Swagger <br>
+										<strong>Performance:</strong> Redis for caching <br>
+										<strong>Containers & Deployment:</strong> Docker, AWS <br>
+										<strong>CI/CD Automation:</strong> GitHub Actions <br>
+										<strong>Development Environment:</strong> Visual Studio <br>
+										<strong>Architecture:</strong> Hexagonal – clear separation between domain,
+										infrastructure, and adapters <br>
+									</ul>
+
+									<h3 style="color: #2980b9;">Role in the Project</h3>
+									<p>
+										Actively contributed to the full development lifecycle of the project as
+										part of a collaborative development team. Responsibilities included designing
+										the architecture, implementing mobile and backend services, setting up
+										automated testing and CI/CD pipelines, and ensuring cloud readiness and
+											security best practices.</p>
+									<ul class="icons">
+										<li><a href="https://github.com/PoliedroSoftware/backend-api-eds.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</div>
+							</section>
+							<section id="three1">
+								<div class="inner">
+									<header class="major">
+										<h2>EDS App Smart System for Service Stations</h2>
+									</header>
+									<p>
+										    <strong>EDS App</strong> is a modern application developed with <strong>.NET MAUI</strong>, designed to manage
+										and operate service stations. The project follows a <em>hexagonal architecture</em> to
+										maintain clean and decoupled code, and leverages tools like <strong>Appium</strong> for mobile
+										test automation, <strong>Tolgge</strong> for UI and translation management, and <strong>GitHub Actions</strong>
+										for continuous integration and automated deployment.
+									</p>
+									<p>
+										The entire system is focused on enabling robust testing on both Android and Windows
+										platforms, ensuring quality and maintainability at every stage.
+									</p>
+
+									<h3 style="color: #2980b9;">Key Technologies</h3>
+									<ul>
+										<strong>Frontend & Platform:</strong> .NET MAUI, Tolgge <br>
+										<strong>Testing & Automation:</strong> Appium, NUnit, Hexagonal Architecture <br>
+										<strong>DevOps:</strong> GitHub Actions for CI/CD <br>
+										<strong>Code Organization:</strong> Platform-based structure (Android, Windows) <br>
+										using design patterns such as DriverManager and reusable components (TextField, Button, etc.) <br>
+									</ul>
+
+									<h3 style="color: #2980b9;">Role in the Project</h3>
+									<p>
+										Full development of the architecture, test automation, continuous integration, and
+										optimization of the development workflow using software engineering best practices.
+									</p>
+									<p>
+										For Product testing: <br>
+										User: islander <br>
+										Pasw: islander <br>
+	
+									</p>
+									<ul class="icons">
+										<li><a href="https://github.com/PoliedroSoftware/app-eds.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="https://drive.google.com/file/d/1EfDgCz8BcI7H16o7kVJQ19b9fKNl5EcS/view?usp=sharing" target="_blank" class="icon brands alt fa-android"><span class="label">Android</span></a></li>
+									</ul>
+								</div>
+							</section>
+							<section id="three2">
+								<div class="inner">
+									<header class="major">
+										<h2>Users and Task Microservices</h2>
+									</header>
+									<p>
+										This is a microservices-based system developed using Spring Boot and Spring
+										Cloud. It currently includes services like user and task management, which 
+										communicate via Feign Client. It also integrates Eureka for service discovery,
+										Config Server for centralized configuration, and an API Gateway as the main 
+										entry point. The project is actively under development and is part of a collaborative
+										effort, with plans to add more services and features soon..
+									</p>
+									<ul class="icons">
+										<li><a href="https://github.com/MicroServices-Arquitecture" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</div>
+							</section>
+							<section id="three3">
+								<div class="inner">
+									<header class="major">
+										<h2>Products-Microservice</h2>
+									</header>
+									<p>
+										ms-product is a microservice developed with Spring Boot that handles product
+										management within a microservices architecture. It provides a complete set of
+										CRUD operations (Create, Read, Update, Delete) for product data.
+									</p>
+									<ul class="icons">
+										<li><a href="https://github.com/William0814/products-microservices.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</div>
+							</section>
+							<section id="three4">
+								<div class="inner">
+									<header class="major">
+										<h2>Would you like to know the weather of any city?</h2>
+									</header>
+									<p>
+										This small app is for know the weather of the any city in next 5 days,
+										is build with streamlit, requests and plotly librerys, This app uses an
+										API that provides me with data for the next 5 days from all the cities in the world.
+									</p>
+									<ul class="icons">
+										<li><a href="https://github.com/William0814/Weather-city-app.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="https://weather-city-app-william-rodriguez.streamlit.app/" target="_blank" class="icon solid alt fa-globe"><span class="label">Link</span></a></li>
+									</ul>
+								</div>
+							</section>
+							<section id="three5">
+								<div class="inner">
+									<header class="major">
+										<h2>NASA API RestFull</h2>
+									</header>
+									<p>
+										This app consumes a NASA API and brings with it every day a new topic of interest 
+										about something in space, perhaps a star or celestial body, planet, etc.
+									</p>
+									<ul class="icons">
+										<li><a href="https://github.com/William0814/Student-Project-API-NASA.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="https://project-api-nasa.streamlit.app/" target="_blank" class="icon solid alt fa-globe"><span class="label">Link</span></a></li>
+									</ul>
+								</div>
+							</section>
+							<section id="three6">
+								<div class="inner">
+									<header class="major">
+										<h2>Landing Page</h2>
+									</header>
+									<p>
+										This small project is a page in homage to the city of Heidelberg. It's one of my favorite cities in Germany.
+										Its infrastructure and culture are truly intriguing. It's built entirely in Python, and for the interactions
+										and design, I imported a very useful library called Streamlit. Below is the link to the deployed app and, of 
+										course, its repository. I hope you like it.
+									</p>
+									<ul class="icons">
+										<li><a href="https://github.com/William0814/Heidelberg_page.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="https://heidelbergpage-landing-page.streamlit.app/" target="_blank" class="icon solid alt fa-globe"><span class="label">Link</span></a></li>
+									</ul>
+								</div>
+							</section>
+							<section id="three7">
+								<div class="inner">
+									<header class="major">
+										<h2>GUI Desktop App</h2>
+									</header>
+									<p>
+										This is a small yet functional desktop text editor developed in Python. 
+										The application features an intuitive graphical interface and allows basic 
+										text management operations. Although designed as a beginner-friendly project,
+										it is well-structured and follows good development practices.
+										The application was built using the library: FreeSimpleGUI, providing a smooth
+										user experience.
+									</p>
+									<ul class="icons">
+										<li><a href="https://github.com/William0814/employs_native_app.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="{{url_for('static', filename='assets/apk/gui_windows.exe')}}" target="_blank" class="icon brands alt fa-windows"><span class="label">Link</span></a></li>
+										<li><a href="{{url_for('static', filename='assets/apk/gui_linux')}}" target="_blank" class="icon brands alt fa-linux"><span class="label">Link</span></a></li>
+									</ul>
+								</div>
+							</section>						
+						</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://www.facebook.com/willi.rodriguezzzz" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://github.com/William0814" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/william-rodríguez-5533901a6" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="http://wa.me/+4917620692862" target="_blank" class="icon brands alt fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; 2025, all rights reserved</li><li>Developed by: <a href="">Ing. William Rodriguez</a></li>
+							</ul>
+						</div>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
