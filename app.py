@@ -4,12 +4,13 @@ from datetime import datetime
 from classes.senden_email import email_config
 from flask_sqlalchemy import SQLAlchemy
 import os
+from dotenv import load_dotenv
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = '0814082515ea&mi'
+app.config['SECRET_KEY'] = os.environ('SECRET_KEY')
 
 db.init_app(app)
 
