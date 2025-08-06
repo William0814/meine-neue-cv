@@ -3,6 +3,7 @@ from percistence.form import Form, db
 from datetime import datetime
 from classes.senden_email import email_config
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 
 app = Flask(__name__)
@@ -55,4 +56,5 @@ def experience():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
