@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="{{ tolgee_lang }}">
 	<head>
 		<title>Home</title>
 		<meta charset="utf-8" />
@@ -7,8 +7,8 @@
 		<meta name="author" content="William Rodriguez" />
 		<meta name="robots" content="index, follow" />
 
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" />
-		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css')}}" /></noscript>
+		<link rel="stylesheet" href="{{ url_for_lang('static', filename='assets/css/main.css')}}" />
+		<noscript><link rel="stylesheet" href="{{ url_for_lang('static', filename='assets/css/noscript.css')}}" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -17,22 +17,29 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="{{ url_for('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
+						<a href="{{ url_for_lang('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
+						<div class="col-12">
+							<select name="demo-category" id="demo-category">
+								<option value="es-CO">es-CO</option>
+								<option value="en-US">en-US</option>
+								<option value="de-DE">de-DE</option>
+							</select>
+						</div>
 					</header>
 
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="{{ url_for('about_me')}}">About Me</a></li>
-							<li><a href="{{ url_for('studies')}}">Studies</a></li>
-							<li><a href="{{ url_for('experience')}}">Experience</a></li>
-							<li><a href="#contact">Contact Me</a></li>
+							<li><a href="{{ url_for_lang('about_me')}}" data-i18n="home-menu-about">About Me</a></li>
+							<li><a href="{{ url_for_lang('studies')}}" data-i18n="home-h3-studies">Studies</a></li>
+							<li><a href="{{ url_for_lang('experience')}}" data-i18n="home-h3-exp">Experience</a></li>
+							<li><a href="#contact" data-i18n="home-menu-cont">Contact Me</a></li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="#one" class="button primary fit">Get Started</a></li>
+							<li><a href="#one" class="button primary fit" data-i18n="home-li-get">Get Started</a></li>
 						</ul>
 					</nav>
 
@@ -40,15 +47,15 @@
 					<section id="banner" class="major">
 						<div class="inner">
 							<header class="major">
-								<h1>Hi, my name is William</h1>
+								<h1 data-i18n="tittle-home-hi">Hi, my name is William</h1>
 							</header>
 							<div class="content">
-								<p>Thank you very much for visiting my page. I am pleased to share with <br>
+								<p data-i18n="title-home-thank">Thank you very much for visiting my page. I am pleased to share with <br>
 									you my experiences, studies, and knowledge, which will help you gain <br>
 									a clearer understanding of my profile, my strengths, and, why not, <br>
 									also my areas for improvement. Welcome!</p>
 								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Get Started</a></li>
+									<li><a href="#one" class="button next scrolly" data-i18n="home-li-get">Get Started</a></li>
 								</ul>
 							</div>
 						</div>
@@ -61,56 +68,56 @@
 							<section id="one" class="tiles">
 								<article>
 									<span class="image">
-										<img src="{{url_for('static', filename='assets/images/william.jpg')}}" alt="" />
+										<img src="{{url_for_lang('static', filename='assets/images/william.jpg')}}" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="{{ url_for('about_me') }}" class="link">Who am I?</a></h3>
-										<p>All about me!!</p>
+										<h3 data-i18n="home-h3-who"><a href="{{ url_for_lang('about_me') }}" class="link">Who am I?</a></h3>
+										<p data-i18n="home-p-all">All about me!!</p>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="{{url_for('static', filename='assets/images/fondo_proyects.jpg')}}" alt="" />
+										<img src="{{url_for_lang('static', filename='assets/images/fondo_proyects.jpg')}}" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="{{ url_for('experience') }}" class="link">Experience</a></h3>
-										<p>Section of work experience and functions performed</p>
+										<h3 data-i18n="home-h3-exp"><a href="{{ url_for_lang('experience') }}" class="link">Experience</a></h3>
+										<p data-i18n="home-p-section">Section of work experience and functions performed</p>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="{{url_for('static', filename='assets/images/fondo_studies.jpg')}}" alt="" />
+										<img src="{{url_for_lang('static', filename='assets/images/fondo_studies.jpg')}}" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="{{ url_for('studies') }}" class="link">Studies</a></h3>
-										<p>Studies and knowledge section</p>
+										<h3 data-i18n="home-h3-studies"><a href="{{ url_for_lang('studies') }}" class="link">Studies</a></h3>
+										<p data-i18n="home-p-studies">Studies and knowledge section</p>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="{{url_for('static', filename='assets/images/fondo_app.jpg')}}" alt="" />
+										<img src="{{url_for_lang('static', filename='assets/images/fondo_app.jpg')}}" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="{{ url_for('experience')}}#three1" class="link">EDS App</a></h3>
-										<p>EDS App (Smart System for Service Stations)</p>
+										<h3><a href="{{ url_for_lang('experience')}}#three1" class="link">EDS App</a></h3>
+										<p data-i18n="home-p-eds">EDS App (Smart System for Service Stations)</p>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="{{url_for('static', filename='assets/images/fondo_Back.jpg')}}" alt="" />
+										<img src="{{url_for_lang('static', filename='assets/images/fondo_Back.jpg')}}" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="{{ url_for('experience')}}#three" class="link">EDS Backend</a></h3>
-										<p>EDS App Backend Robust and Scalable Architecture for Service Stations</p>
+										<h3><a href="{{ url_for_lang('experience')}}#three" class="link">EDS Backend</a></h3>
+										<p data-i18n="home-p-backen">EDS App Backend Robust and Scalable Architecture for Service Stations</p>
 									</header>
 								</article>
 								<article>
 									<span class="image">
-										<img src="{{url_for('static', filename='assets/images/fondo_java.jpg')}}" alt="" />
+										<img src="{{url_for_lang('static', filename='assets/images/fondo_java.jpg')}}" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="{{ url_for('experience')}}#three2" class="link">User and Task</a></h3>
-										<p>Users and Task Microservices</p>
+										<h3><a href="{{ url_for_lang('experience')}}#three2" class="link" data-i18n="home-h3-user">User and Task</a></h3>
+										<p data-i18n="home-p-micro">Users and Task Microservices</p>
 									</header>
 								</article>
 							</section>
@@ -122,20 +129,20 @@
 								<form method="post">
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Name</label>
+											<label for="name" data-i18n="home-label-name">Name</label>
 											<input type="text" name="name" id="name" required />
 										</div>
 										<div class="field half">
-											<label for="email">Email</label>
+											<label for="email" data-i18n="home-label-email">Email</label>
 											<input type="text" name="email" id="email" required/>
 										</div>
 										<div class="field">
-											<label for="message">Message</label>
+											<label for="message" data-i18n="home-label-message">Message</label>
 											<textarea name="message" id="message" rows="6" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="submit" value="Send" class="primary" data-i18n="home-input-send" data-i18n-attr="value"/></li>
 										{% with message = get_flashed_messages() %}
 										{% if messages %}
 										<div class="alert alert-succes">
@@ -144,7 +151,7 @@
 											{% endfor %}
 										</div>
 										{% endif %} {% endwith %}
-										<li><input type="reset" value="Clear" /></li>
+										<li><input type="reset" value="Clear" data-i18n="home-input-clear" data-i18n-attr="value"/></li>
 									</ul>
 								</form>
 							</section>
@@ -152,21 +159,21 @@
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
+										<h3 data-i18n="home-label-email">Email</h3>
 										<a href="mailto:william.rodriguez1990ti@gmail.com">william.rodriguez1990ti@gmail.com</a>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
+										<h3 data-i18n="home-h3-tele">Phone</h3>
 										<span>+49 176 206 92 862</span>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
+										<h3 data-i18n="home-h3-address">Address</h3>
 										<span>Bad Waldsee<br />
 										Germany<br />
 										
@@ -186,7 +193,7 @@
 								<li><a href="http://wa.me/+4917620692862" target="_blank" class="icon brands alt fa-whatsapp"><span class="label">Whatsapp</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; 2025, all rights reserved</li><li>Developed by: <a href="">Ing. William Rodriguez</a></li>
+								<li data-i18n="home-li-2025">&copy; 2025, all rights reserved</li><li data-i18n="home-li-dev">Developed by: <a href="">Ing. William Rodriguez</a></li>
 							</ul>
 						</div>
 					</footer>
@@ -194,6 +201,16 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
+			<script>
+			// Inyectamos la config desde Flask al frontend
+			window.tolgeeConfig = {
+				apiKey: "{{ tolgee_api_key }}",
+				apiUrl: "{{ tolgee_api_url }}",
+				language: "{{ tolgee_lang }}"
+			};
+			</script>
+			<script src="{{ url_for_lang('static', filename='assets/js/tolgge-init.js') }}"></script>
 			<script src="static/assets/js/jquery.min.js"></script>
 			<script src="static/assets/js/jquery.scrolly.min.js"></script>
 			<script src="static/assets/js/jquery.scrollex.min.js"></script>
@@ -201,6 +218,5 @@
 			<script src="static/assets/js/breakpoints.min.js"></script>
 			<script src="static/assets/js/util.js"></script>
 			<script src="static/assets/js/main.js"></script>
-
 	</body>
 </html>

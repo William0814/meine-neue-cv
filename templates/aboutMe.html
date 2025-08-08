@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="{{ tolgee_lang }}">
 	<head>
 		<title>About Me</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" />
-		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css')}}" /></noscript>
+		<link rel="stylesheet" href="{{ url_for_lang('static', filename='assets/css/main.css')}}" />
+		<noscript><link rel="stylesheet" href="{{ url_for_lang('static', filename='assets/css/noscript.css')}}" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -14,7 +14,7 @@
 
 			<!-- Header -->
 				<header id="header">
-					<a href="{{ url_for('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
+					<a href="{{ url_for_lang('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
 					<nav>
 						<a href="#menu">Menu</a>
 					</nav>
@@ -23,13 +23,13 @@
 			<!-- Menu -->
 				<nav id="menu">
 					<ul class="links">
-						<li><a href="{{ url_for('home')}}">Home</a></li>
-						<li><a href="{{ url_for('studies')}}">Studies</a></li>
-						<li><a href="{{ url_for('experience')}}">Experience</a></li>
-						<li><a href="{{ url_for('home')}}#contact">Contact Me</a></li>
+						<li><a href="{{ url_for_lang('home')}}" data-i18n="about-li-home">Home</a></li>
+						<li><a href="{{ url_for_lang('studies')}}" data-i18n="home-h3-studies">Studies</a></li>
+						<li><a href="{{ url_for_lang('experience')}}" data-i18n="home-h3-exp">Experience</a></li>
+						<li><a href="{{ url_for_lang('home')}}#contact" data-i18n="home-menu-cont">Contact Me</a></li>
 					</ul>
 					<ul class="actions stacked">
-						<li><a href="#" class="button primary fit">Get Started</a></li>
+						<li><a href="#" class="button primary fit" data-i18n="home-li-get">Get Started</a></li>
 					</ul>
 				</nav>
 
@@ -41,7 +41,7 @@
 							<img src="{{ url_for('static', filename='assets/images/william.jpg')}}" alt="" />
 						</span>
 						<header class="major">
-							<h1>My Live...</h1>
+							<h1 data-i18n="about-h1-my">My Live...</h1>
 						</header>
 						<div class="content">
 							<p></p>
@@ -60,7 +60,7 @@
 								</header>
 
 								<!-- Content -->									
-									<p>Hi, I’m William, a systems engineer with a great passion for technology, software development,
+									<p data-i18n="about-text-hi" style="white-space: pre-line;">Hi, I’m William, a systems engineer with a great passion for technology, software development,
 										and cybersecurity. Throughout my journey, I’ve worked with technologies like Java (Spring Boot),
 										.NET, Python, and Docker, building everything from REST APIs to complete microservices, always
 										focused on quality, scalability, and best practices. <br>
@@ -76,11 +76,12 @@
 										<br>
 										I’m also open to collaborating as a freelancer, offering my knowledge and experience to those who need to
 										develop a digital product, optimize processes, or create tailored solutions. If you have a project in mind
-										or are looking for someone to help bring your ideas to the next level, feel free to reach out. <a href="{{ url_for('home')}}#contact">I’d love to
-										join you on that journey!</p></a>
+										or are looking for someone to help bring your ideas to the next level, feel free to reach out.
+										 <a href="{{ url_for_lang('home')}}#contact">I’d love to join you on that journey!</p></a>
+
 									<div class="row">
 										<div class="col-6 col-12-small">
-											<h3>Development Skills</h3>
+											<h3 data-i18n="about-h3-dev">Development Skills</h3>
 														<ul>
 															<li>.NET</li>
 															<li>Django</li>
@@ -101,8 +102,8 @@
 														</ul>
 										</div>
 										<div class="col-6 col-12-small">
-											<h3>Hobbies!!</h3>
-											<p>Outside of work and programming, I deeply enjoy spending time with
+											<h3 data-i18n="about-h3-hobbies">Hobbies!!</h3>
+											<p data-i18n="about-p-hobb" style="white-space: pre-line;">Outside of work and programming, I deeply enjoy spending time with
 												my wife and our two children, who are my greatest source of motivation
 												and inspiration. We share simple but meaningful moments—going for
 												walks, playing at home, or watching movies together. I truly believe
@@ -115,15 +116,15 @@
 												I also enjoy music, a well-made cup of coffee, and the challenges that come with
 												solving problems—both inside and outside of code. <br>
 												<br>
-											To me, every project—whether professional or personal—is an opportunity to grow, learn,
-											and create value. That mindset stays with me whether I’m programming, playing with my kids,
-											or sharing a conversation with my wife at the end of the day.</p> <br>
+												To me, every project—whether professional or personal—is an opportunity to grow, learn,
+												and create value. That mindset stays with me whether I’m programming, playing with my kids,
+												or sharing a conversation with my wife at the end of the day.</p> <br>
 										</div>
 									
 										<div style="display: flex; justify-content: center; width: 100%;">	
 											<ul class="actions">
-												<li><a href="{{url_for('static', filename='assets/pdf/HV_espanolV1.pdf')}}" target="_blank" class="button primary icon solid fa-download">CV in Spanisch</a></li>
-												<li><a href="{{url_for('static', filename='assets/pdf/HV duschV1.pdf')}}" target="_blank" class="button primary icon solid fa-download">CV in German</a></li> <br>
+												<li><a href="{{url_for('static', filename='assets/pdf/HV_espanolV1.pdf')}}" target="_blank" class="button primary icon solid fa-download" data-i18n="about-li-cv">CV in Spanisch</a></li>
+												<li><a href="{{url_for('static', filename='assets/pdf/HV duschV1.pdf')}}" target="_blank" class="button primary icon solid fa-download" data-i18n="about-li-cva">CV in German</a></li> <br>
 											</ul> <br>
 										</div>
 									</div>
@@ -142,13 +143,23 @@
 						<li><a href="http://wa.me/+4917620692862" target="_blank" class="icon brands alt fa-whatsapp"><span class="label">Whatsapp</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; 2025, all rights reserved</li><li>Developed by: <a href="">Ing. William Rodriguez</a></li>
+						<li data-i18n="home-li-2025">&copy; 2025, all rights reserved</li><li data-i18n="home-li-dev">Developed by: <a href="">Ing. William Rodriguez</a></li>
 					</ul>
 				</div>
 			</footer>
 		</div>
 
 <!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
+	<script>
+	// Inyectamos la config desde Flask al frontend
+		window.tolgeeConfig = {
+				apiKey: "{{ tolgee_api_key }}",
+				apiUrl: "{{ tolgee_api_url }}",
+				language: "{{ tolgee_lang }}"
+			};
+	</script>
+	<script src="{{ url_for_lang('static', filename='assets/js/tolgge-init.js') }}"></script>
 	<script src="static/assets/js/jquery.min.js"></script>
 	<script src="static/assets/js/jquery.scrolly.min.js"></script>
 	<script src="static/assets/js/jquery.scrollex.min.js"></script>
@@ -156,6 +167,7 @@
 	<script src="static/assets/js/breakpoints.min.js"></script>
 	<script src="static/assets/js/util.js"></script>
 	<script src="static/assets/js/main.js"></script>
+
 
 	</body>
 </html>

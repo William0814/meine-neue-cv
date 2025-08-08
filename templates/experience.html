@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="{{ tolgee_lang }}">
 	<head>
 		<title>Experience</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}"/>
-		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css')}}" /></noscript>
+		<link rel="stylesheet" href="{{ url_for_lang('static', filename='assets/css/main.css')}}"/>
+		<noscript><link rel="stylesheet" href="{{ url_for_lang('static', filename='assets/css/noscript.css')}}" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -16,7 +16,7 @@
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt">
-						<a href="{{ url_for('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
+						<a href="{{ url_for_lang('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -25,13 +25,13 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="{{ url_for('home')}}">Home</a></li>
-							<li><a href="{{ url_for('about_me')}}">About Me</a></li>
-							<li><a href="{{ url_for('studies')}}">Studies</a></li>
-							<li><a href="{{ url_for('home')}}#contact">Contact Me</a></li>
+							<li><a href="{{ url_for_lang('home')}}" data-i18n="about-li-home">Home</a></li>
+							<li><a href="{{ url_for_lang('about_me')}}" data-i18n="home-menu-about">About Me</a></li>
+							<li><a href="{{ url_for_lang('studies')}}" data-i18n="home-h3-studies">Studies</a></li>
+							<li><a href="{{ url_for_lang('home')}}#contact" data-i18n="home-menu-cont">Contact Me</a></li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button primary fit" data-i18n="home-li-get">Get Started</a></li>
 						</ul>
 					</nav>
 
@@ -43,7 +43,7 @@
 								<img src="{{ url_for('static', filename='assets/images/fondo_java.jpg')}}" alt="" />
 							</span>
 							<header class="major">
-								<h1>Experience</h1>
+								<h1 data-i18n="home-h3-exp">Experience</h1>
 							</header>
 							<div class="content">
 								<p></p>
@@ -58,7 +58,7 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Dev Projects and Company Experience</h2>
+										<h2 data-i18n="expe-h2-dev">Dev Projects and Company Experience</h2>
 									</header>
 									<p></p>
 								</div>
@@ -75,7 +75,7 @@
 											<header class="major">
 												<h3>Poliedro Software S.A.S</h3>
 											</header>
-											<p>(current) I currently work freelance or on projects with this
+											<p data-i18n="expe-p-current">(current) I currently work freelance or on projects with this
 												company as a back-end developer, implementing technologies such as .NET
 												and .NET/MAUI, MySQL, in memory query management with Redis, Docker, AWS,
 												and Azure for deployments. As a project manager, I manage Azure DevOps
@@ -94,7 +94,7 @@
 											<header class="major">
 												<h3>Tae Ltda</h3>
 											</header>
-											<p>(05/2023 - 01/2024) A company providing administrative and accounting
+											<p data-i18n="expe-p-tae">(05/2023 - 01/2024) A company providing administrative and accounting
 												software for the real estate sector. I worked as a National Support and
 												Implementation Analyst. My responsibilities included: Providing technical
 												support nationwide remotely, by phone, and in person. Registering and
@@ -116,9 +116,9 @@
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>SPA real estate group</h3>
+												<h3 data-i18n="expe-h3-spa">SPA real estate group</h3>
 											</header>
-											<p>  (12/2022 - 05/2023) One of the largest real estate companies in Colombia,
+											<p data-i18n="expe-p-resume-spa">  (12/2022 - 05/2023) One of the largest real estate companies in Colombia,
 												where I worked as an IT Analyst. My main responsibilities included: Ensuring
 												the functionality and availability of corporate applications. Supporting
 												vendors in the implementation of technology projects. Training users in the
@@ -139,10 +139,10 @@
 											<header class="major">
 												<h3>R&S Solutions</h3>
 											</header>
-											<p>(11/2020 - 11/2022) A company specializing in technical support, both remote
-												and on-site. For almost two years, my responsibilities included: Computer
-												technical support and maintenance. Software installation and configuration.
-												Network administration and configuration. System maintenance and management.</p>
+												<p data-i18n="expe-p-rys">(11/2020 - 11/2022) A company specializing in technical support, both remote
+													and on-site. For almost two years, my responsibilities included: Computer
+													technical support and maintenance. Software installation and configuration.
+													Network administration and configuration. System maintenance and management.</p>
 										</div>
 									</div>
 								</section>
@@ -152,7 +152,7 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>EDS App Backend Robust and Scalable Architecture for Service Stations</h2>
+										<h2 data-i18n="home-p-backen">EDS App Backend Robust and Scalable Architecture for Service Stations</h2>
 									</header>
 									<p>The backend of <strong>EDS App</strong> is built with <strong>ASP.NET Core</strong>, following a
 										<em>hexagonal architecture</em> that ensures clean, decoupled, and maintainable code.
@@ -195,10 +195,10 @@
 							<section id="three1">
 								<div class="inner">
 									<header class="major">
-										<h2>EDS App Smart System for Service Stations</h2>
+										<h2 data-i18n="home-p-eds">EDS App Smart System for Service Stations</h2>
 									</header>
-									<p>
-										    <strong>EDS App</strong> is a modern application developed with <strong>.NET MAUI</strong>, designed to manage
+									<p data-i18n="expe-p-backend">
+										<strong>EDS App</strong> is a modern application developed with <strong>.NET MAUI</strong>, designed to manage
 										and operate service stations. The project follows a <em>hexagonal architecture</em> to
 										maintain clean and decoupled code, and leverages tools like <strong>Appium</strong> for mobile
 										test automation, <strong>Tolgge</strong> for UI and translation management, and <strong>GitHub Actions</strong>
@@ -238,7 +238,7 @@
 							<section id="three2">
 								<div class="inner">
 									<header class="major">
-										<h2>Users and Task Microservices</h2>
+										<h2 data-i18n="home-p-micro">Users and Task Microservices</h2>
 									</header>
 									<p>
 										This is a microservices-based system developed using Spring Boot and Spring
@@ -348,13 +348,24 @@
 								<li><a href="http://wa.me/+4917620692862" target="_blank" class="icon brands alt fa-whatsapp"><span class="label">Whatsapp</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; 2025, all rights reserved</li><li>Developed by: <a href="">Ing. William Rodriguez</a></li>
+								<li data-i18n="home-li-2025">&copy; 2025, all rights reserved</li><li data-i18n="home-li-dev">Developed by: <a href="">Ing. William Rodriguez</a></li>
 							</ul>
 						</div>
 					</footer>
 			</div>
 
 		<!-- Scripts -->
+		 <script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
+			<script>
+			// Inyectamos la config desde Flask al frontend
+			window.tolgeeConfig = {
+				apiKey: "{{ tolgee_api_key }}",
+				apiUrl: "{{ tolgee_api_url }}",
+				language: "{{ tolgee_lang }}"
+			};
+			</script>
+			<script src="{{ url_for_lang('static', filename='assets/js/tolgge-init.js') }}"></script>
+
 			<script src="static/assets/js/jquery.min.js"></script>
 			<script src="static/assets/js/jquery.scrolly.min.js"></script>
 			<script src="static/assets/js/jquery.scrollex.min.js"></script>

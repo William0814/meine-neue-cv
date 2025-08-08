@@ -5,17 +5,36 @@ from classes.senden_email import email_config
 from flask_sqlalchemy import SQLAlchemy
 import os
 from dotenv import load_dotenv
+from classes.tolgge import TolggeManager
 
-
+load_dotenv()
 app = Flask(__name__)
+
+tolgge = TolggeManager(
+    api_key =os.getenv('TOLGEE_API_KEY'),
+    default_lang= 'en-US'
+)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 db.init_app(app)
 
+@app.context_processor
+def inject_url_for_lang():
+    from flask import url_for
+
+    def url_for_lang(endpoint, **values):
+        lang = request.args.get('lang', 'en-US')
+        if lang:
+            values['lang'] = lang
+        return url_for(endpoint, **values)
+    return dict(url_for_lang=url_for_lang)
+
 @app.route("/", methods=['GET', 'POST'])
 def home():
+    lang = request.args.get('lang', 'en-US')
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
@@ -37,23 +56,26 @@ def home():
         except Exception as e:
             flash(f"Error to email send: {str(e)}", "danger")
 
-        return render_template("index.html")
+        return render_template("index.html", **tolgge.get_translation(lang))
 
-    return render_template("index.html")
+    return render_template("index.html", **tolgge.get_translation(lang))
 
     
 
 @app.route('/about_me')
 def about_me():
-    return render_template('aboutMe.html')
+    lang = request.args.get('lang', 'en-US')
+    return render_template('aboutMe.html', **tolgge.get_translation(lang))
 
 @app.route('/studies')
 def studies():
-    return render_template('studies.html')
+    lang = request.args.get('lang', 'en-US')
+    return render_template('studies.html', **tolgge.get_translation(lang))
 
 @app.route('/experience')
 def experience():
-    return render_template('experience.html')
+    lang = request.args.get('lang', 'en-US')
+    return render_template('experience.html', **tolgge.get_translation(lang))
 
 
 if __name__ == '__main__':
