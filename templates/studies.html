@@ -1,167 +1,187 @@
 <!DOCTYPE HTML>
 <html lang="{{ tolgee_lang }}">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<!--Favicon and styles CSS-->
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/images/favicon-32x32.png' )}}" />
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/images/favicon-16x16.png') }}"/>
-		<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
+	<!--Favicon and styles CSS-->
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/images/favicon-32x32.png' )}}" />
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/images/favicon-16x16.png') }}"/>
+	<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
 
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" />
-		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css')}}" /></noscript>
-		<title>Studies</title>
-	</head>
-	<body class="is-preload">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" />
+	<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css')}}" /></noscript>
+	<title>Studies</title>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="{{ url_for_lang('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+		<!-- Header -->
+		<header id="header" class="alt">
+			<a href="{{ url_for_lang('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="{{ url_for_lang('home')}}" data-i18n="about-li-home">Home</a></li>
-							<li><a href="{{ url_for_lang('about_me')}}" data-i18n="home-menu-about">About Me</a></li>
-							<li><a href="{{ url_for_lang('experience')}}" data-i18n="home-h3-exp">Experience</a></li>
-							<li><a href="{{ url_for_lang('home')}}#contact" data-i18n="home-menu-cont">Contact Me</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit" data-i18n="home-li-get">Get Started</a></li>							
-						</ul>
-					</nav>
+	<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="{{ url_for_lang('home')}}" data-i18n="about-li-home">Home</a></li>
+				<li><a href="{{ url_for_lang('about_me')}}" data-i18n="home-menu-about">About Me</a></li>
+				<li><a href="{{ url_for_lang('experience')}}" data-i18n="home-h3-exp">Experience</a></li>
+				<li><a href="{{ url_for_lang('home')}}#contact" data-i18n="home-menu-cont">Contact Me</a></li>
+			</ul>
+			<ul class="actions stacked">
+				<li><a href="#" class="button primary fit" data-i18n="home-li-get">Get Started</a></li>							
+			</ul>
+		</nav>
 
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="alt">
-						<div class="inner">
-							<span class="image">
-								<img src="{{ url_for('static', filename='assets/images/fondo_studies.jpg')}}" alt="" />
-							</span>
-							<header class="major">
-								<h1 data-i18n="home-h3-studies">Studies</h1>
-							</header>
-							<div class="content">
-								<p></p>
+	<!-- Banner -->
+	<!-- Note: The "styleN" class below should match that of the header element. -->
+		<section id="banner" class="alt">
+			<div class="inner">
+				<span class="image">
+					<img src="{{ url_for('static', filename='assets/images/fondo_studies.jpg')}}" alt="" />
+				</span>
+				<header class="major">
+					<h1 data-i18n="home-h3-studies">Studies</h1>
+				</header>
+				<div class="content">
+					<p></p>
+				</div>
+			</div>
+		</section>
+
+	<!-- Main -->
+		<div id="main" class="major">
+
+			<!-- two -->
+				<section id="two" class="spotlights">
+					<section>
+						<a href="https://estudiar.unir.net/es/es-gen-uni-gene-universidad-online/?utm_source=GOOGLE-BUSQ&utm_medium=Search&utm_campaign=UNIREU_EU_Mix_X_X_Mix_X_X_MAR_X_LWEB_GLOB_Mix_AREA-VERT_AO_GOOGLE-BUS_BUS_GEN_X_ESPANOLESPOREUROPA&utm_content=ES_Mix_X_X_Mix_X_X_MAR_BUSQ_UNIR_TXT_CPC_GOOGLE-BUS_MIX_X_X_X&bi_campaignid=19743495501&bi_adgroupid=146908873655&wcmp=19743495501&wmatch=e&wkwd=unir%20universidad&wad=649805346403&wpos=&wdt=c&wdm=&gad_source=1&gad_campaignid=19743495501&gbraid=0AAAAADvi6Q_QuaQI4CjVgH7a4IaEAqarC&gclid=CjwKCAjw-svEBhB6EiwAEzSdrtaSIPyXaEJQxTDtMVDBJQvFqsjdmlSJfiF9po56hs1Dfj8dOiXlJxoCY0AQAvD_BwE" target="_blank" class="image">
+							<img src="{{ url_for('static', filename='assets/images/unir.webp')}}" alt="" data-position="center center" />
+						</a>
+						<div class="content">
+							<div class="inner">
+								<header class="major">
+									<h3>UNIR</h3>
+								</header>
+								<p data-i18n="studies-p-unir">
+									I am currently pursuing a postgraduate degree in Software Engineering at the
+									International University Foundation of the Rioja, expected to be completed
+									in 2026. This program allows me to deepen my knowledge in advanced software
+									development, technology architecture design, and IT project management. I am
+									gaining specialized skills in agile methodologies, software engineering best
+									practices, and leadership in tech-driven environments. My goal is to build
+									a strong technical and strategic foundation to deliver innovative and efficient
+									solutions for the business sector, optimizing processes and supporting
+									organizational growth.
+								</p>
 							</div>
 						</div>
 					</section>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a href="https://estudiar.unir.net/es/es-gen-uni-gene-universidad-online/?utm_source=GOOGLE-BUSQ&utm_medium=Search&utm_campaign=UNIREU_EU_Mix_X_X_Mix_X_X_MAR_X_LWEB_GLOB_Mix_AREA-VERT_AO_GOOGLE-BUS_BUS_GEN_X_ESPANOLESPOREUROPA&utm_content=ES_Mix_X_X_Mix_X_X_MAR_BUSQ_UNIR_TXT_CPC_GOOGLE-BUS_MIX_X_X_X&bi_campaignid=19743495501&bi_adgroupid=146908873655&wcmp=19743495501&wmatch=e&wkwd=unir%20universidad&wad=649805346403&wpos=&wdt=c&wdm=&gad_source=1&gad_campaignid=19743495501&gbraid=0AAAAADvi6Q_QuaQI4CjVgH7a4IaEAqarC&gclid=CjwKCAjw-svEBhB6EiwAEzSdrtaSIPyXaEJQxTDtMVDBJQvFqsjdmlSJfiF9po56hs1Dfj8dOiXlJxoCY0AQAvD_BwE" target="_blank" class="image">
-										<img src="{{ url_for('static', filename='assets/images/unir.webp')}}" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>UNIR</h3>
-											</header>
-											<p data-i18n="studies-p-unir">
-												I am currently pursuing a postgraduate degree in Software Engineering at the
-												International University Foundation of the Rioja, expected to be completed
-												in 2026. This program allows me to deepen my knowledge in advanced software
-												development, technology architecture design, and IT project management. I am
-												gaining specialized skills in agile methodologies, software engineering best
-												practices, and leadership in tech-driven environments. My goal is to build
-												a strong technical and strategic foundation to deliver innovative and efficient
-												solutions for the business sector, optimizing processes and supporting
-												organizational growth.
-											</p>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="https://cun.edu.co/" target="_blank" class="image">
-										<img src="{{ url_for('static', filename='assets/images/cun.png')}}" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>CUN</h3>
-											</header>
-											<p data-i18n="studies-p-cun">I continued my studies at the National Unified Corporation of Higher Education
-												(CUN) to obtain a degree in Systems Engineering. The program covers various
-												areas of the technology sector, including data networks, IT security auditing,
-												database administration, applied mathematics, modern algebra, software
-												development, and more. Thanks to the accreditation of prior studies, I
-												completed the degree in two and a half years (the regular duration is
-												five years). This degree has already been recognized by the ZAB (Central
-												Office for Foreign Education in Germany) as equivalent to a level between
-												a Professional and a Master's degree.</p>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="https://www.sena.edu.co/es-co/Paginas/default.aspx" target="_blank" class="image">
-										<img src="{{ url_for('static', filename='assets/images/sena.jpg')}}" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>SENA</h3>
-											</header>
-											<p data-i18n="studies-p-sena">
-												The SENA (National Learning Service) is a public Colombian institution where I earned
-												a Technologist degree in Analysis and Development of Information Systems (2-year program).
-												This training focuses on understanding the software development life cycle, from analysis
-												to implementation and testing. During my studies, I gained knowledge in UML modeling,
-												requirements analysis, design using tools such as Balsamiq, StarUML, and WhiteStarUML,
-												basic development in Java, HTML, and CSS, database management with MySQL and SQL Server,
-												software implementation, and technical documentation.
-											</p>
-										</div>
-									</div>
-								</section>
-							</section>
-					</div>
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://www.facebook.com/willi.rodriguezzzz" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://github.com/William0814" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/william-rodríguez-5533901a6" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="http://wa.me/+4917620692862" target="_blank" class="icon brands alt fa-whatsapp"><span class="label">Whatsapp</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li data-i18n="home-li-2025">&copy; 2025, all rights reserved</li><li data-i18n="home-li-dev">Developed by: <a href="">Ing. William Rodriguez</a></li>
-							</ul>
+					<section>
+						<a href="https://cun.edu.co/" target="_blank" class="image">
+							<img src="{{ url_for('static', filename='assets/images/cun.png')}}" alt="" data-position="center center" />
+						</a>
+						<div class="content">
+							<div class="inner">
+								<header class="major">
+									<h3>CUN</h3>
+								</header>
+								<p data-i18n="studies-p-cun">I continued my studies at the National Unified Corporation of Higher Education
+									(CUN) to obtain a degree in Systems Engineering. The program covers various
+									areas of the technology sector, including data networks, IT security auditing,
+									database administration, applied mathematics, modern algebra, software
+									development, and more. Thanks to the accreditation of prior studies, I
+									completed the degree in two and a half years (the regular duration is
+									five years). This degree has already been recognized by the ZAB (Central
+									Office for Foreign Education in Germany) as equivalent to a level between
+									a Professional and a Master's degree.</p>
+							</div>
 						</div>
-					</footer>
-			</div>
+					</section>
+					<section>
+						<a href="https://www.sena.edu.co/es-co/Paginas/default.aspx" target="_blank" class="image">
+							<img src="{{ url_for('static', filename='assets/images/sena.jpg')}}" alt="" data-position="center center" />
+						</a>
+						<div class="content">
+							<div class="inner">
+								<header class="major">
+									<h3>SENA</h3>
+								</header>
+								<p data-i18n="studies-p-sena">
+									The SENA (National Learning Service) is a public Colombian institution where I earned
+									a Technologist degree in Analysis and Development of Information Systems (2-year program).
+									This training focuses on understanding the software development life cycle, from analysis
+									to implementation and testing. During my studies, I gained knowledge in UML modeling,
+									requirements analysis, design using tools such as Balsamiq, StarUML, and WhiteStarUML,
+									basic development in Java, HTML, and CSS, database management with MySQL and SQL Server,
+									software implementation, and technical documentation.
+								</p>
+							</div>
+						</div>
+					</section>
+					<br>
+					<div class="row-auto" style="text-align: center;">
+						<div class="col-6 col-12-small" style="margin: 0 auto; display: inline-block; text-align: left;">
+							<h3 data-i18n="studies-h3-curses">Courses and Certifications</h3>
+								<ul>
+									<li>Python Mega Course: Learn Python in 60 Days, Build 20 Apps</li>
+									<li>Web Development with Python</li>
+									<li>Cybersegurity Fundaments</li>
+									<li>Network Security</li>
+									<li>Aplicacion de la calidad de Software</li>
+									<li>Controles y Seguridad Informatica</li>
+									<li>Redes y Seguridad</li>
+									<br>
+									<h3 data-i18n="studies-h3-lenguage">Lenguages</h3>
+									<li>German B1</li>
+									<li>English A2</li>
+									<li>Spanisch MotherLenguage</li>
+								</ul>
+						</div>
+					</div>
+				</section>
+		</div>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://www.facebook.com/willi.rodriguezzzz" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="https://github.com/William0814" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://www.linkedin.com/in/william-rodríguez-5533901a6" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				<li><a href="http://wa.me/+4917620692862" target="_blank" class="icon brands alt fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li data-i18n="home-li-2025">&copy; 2025, all rights reserved</li><li data-i18n="home-li-dev">Developed by: <a href="">Ing. William Rodriguez</a></li>
+			</ul>
+		</div>
+	</footer>
 
-		<!-- Scripts -->
-			<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
-			<script>
-			// Inyectamos la config desde Flask al frontend
-			window.tolgeeConfig = {
-				apiKey: "{{ tolgee_api_key }}",
-				apiUrl: "{{ tolgee_api_url }}",
-				language: "{{ tolgee_lang }}"
-			};
-			</script>
-			<script src="{{ url_for_lang('static', filename='assets/js/tolgge-init.js') }}"></script>
-			<script src="static/assets/js/jquery.min.js"></script>
-			<script src="static/assets/js/jquery.scrolly.min.js"></script>
-			<script src="static/assets/js/jquery.scrollex.min.js"></script>
-			<script src="static/assets/js/browser.min.js"></script>
-			<script src="static/assets/js/breakpoints.min.js"></script>
-			<script src="static/assets/js/util.js"></script>
-			<script src="static/assets/js/main.js"></script>
 
-	</body>
+<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
+	<script>
+	// Inyectamos la config desde Flask al frontend
+	window.tolgeeConfig = {
+		apiKey: "{{ tolgee_api_key }}",
+		apiUrl: "{{ tolgee_api_url }}",
+		language: "{{ tolgee_lang }}"
+	};
+	</script>
+	<script src="{{ url_for_lang('static', filename='assets/js/tolgge-init.js') }}"></script>
+	<script src="static/assets/js/jquery.min.js"></script>
+	<script src="static/assets/js/jquery.scrolly.min.js"></script>
+	<script src="static/assets/js/jquery.scrollex.min.js"></script>
+	<script src="static/assets/js/browser.min.js"></script>
+	<script src="static/assets/js/breakpoints.min.js"></script>
+	<script src="static/assets/js/util.js"></script>
+	<script src="static/assets/js/main.js"></script>
+
+</body>
 </html>
