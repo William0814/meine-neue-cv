@@ -35,10 +35,11 @@ def inject_url_for_lang():
 @app.route("/", methods=['GET', 'POST'])
 def home():
     lang = request.args.get('lang', 'en-US')
+    context = tolgge.get_translation(lang)
     if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        message = request.form['message']
+        name = request.form['name'].strip()
+        email = request.form['email'].strip()
+        message = request.form['message'].strip()
         date = datetime.now()
 
         form =  Form(name=name, email=email, message=message, date=date)
@@ -56,9 +57,9 @@ def home():
         except Exception as e:
             flash(f"Error to email send: {str(e)}", "danger")
 
-        return render_template("index.html", **tolgge.get_translation(lang))
+        return render_template("index.html", **context)
 
-    return render_template("index.html", **tolgge.get_translation(lang))
+    return render_template("index.html", **context)
 
     
 

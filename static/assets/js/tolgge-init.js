@@ -1,20 +1,25 @@
-const { Tolgee, InContextTools, FormatSimple, BackendFetch } = window['@tolgee/web'];
+// --- Tolgee i18n initialization and language switcher ---
 
-// Detectar idioma desde URL o localStorage
+// 1. Detect language from URL or localStorage, default to 'en-US'
 const url = new URL(window.location.href);
-let currentLang = url.searchParams.get('lang') || localStorage.getItem('preferredLang') || 'en-US';
-console.log('[Tolgee] Detected language:', currentLang);
-
-// Guardar idioma en localStorage
+const currentLang = url.searchParams.get('lang') || localStorage.getItem('preferredLang') || 'en-US';
 localStorage.setItem('preferredLang', currentLang);
 
-// Preseleccionar el idioma en el <select> si existe
+// 2. Preselect language in dropdown and set up change handler
 document.addEventListener('DOMContentLoaded', () => {
   const selector = document.getElementById('demo-category');
-  if (selector) selector.value = currentLang;
+  if (selector) {
+    selector.value = currentLang;
+    selector.addEventListener('change', function () {
+      localStorage.setItem('preferredLang', this.value);
+      url.searchParams.set('lang', this.value);
+      window.location.href = url.toString(); // Reload with new lang param
+    });
+  }
 });
 
-// Inicializar Tolgee
+// 3. Initialize Tolgee with config from backend
+const { Tolgee, InContextTools, FormatSimple, BackendFetch } = window['@tolgee/web'];
 const tolgee = Tolgee()
   .use(InContextTools())
   .use(FormatSimple())
@@ -27,35 +32,16 @@ const tolgee = Tolgee()
     observerOptions: { inputPrefix: '{{', inputSuffix: '}}' },
   });
 
-console.log('[Tolgee] Config:', window.tolgeeConfig);
-console.log('[Tolgee] SDK instance:', tolgee);
-
+// 4. Run Tolgee and translate elements with [data-i18n]
 tolgee.run().then(() => {
-    const t = tolgee.t;
-
-    document.querySelectorAll('[data-i18n]').forEach((el) => {
-        const key = el.getAttribute('data-i18n');
-        const attr = el.getAttribute('data-i18n-attr');
-        console.log('[Tolgee] Translating:', key);
-
-        if (attr) {
-        el.setAttribute(attr, t(key));
-        } else {
-        el.innerText = t(key);
-        }
-    });
-    });
-
-// Cambiar idioma desde el selector
-document.addEventListener('DOMContentLoaded', () => {
-  const selector = document.getElementById('demo-category');
-  if (selector) {
-    selector.addEventListener('change', function () {
-      const lang = this.value;
-      localStorage.setItem('preferredLang', lang);
-      const url = new URL(window.location.href);
-      url.searchParams.set('lang', lang);
-      window.location.href = url.toString();
-    });
-  }
+  const t = tolgee.t;
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    const attr = el.getAttribute('data-i18n-attr');
+    if (attr) {
+      el.setAttribute(attr, t(key));
+    } else {
+      el.innerText = t(key);
+    }
+  });
 });

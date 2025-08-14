@@ -1,5 +1,3 @@
-
-
 class TolggeManager:
     def __init__(self, api_key, default_lang='en-US', api_url='https://app.tolgee.io'):
         self.api_key = api_key
