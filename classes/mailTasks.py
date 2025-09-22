@@ -13,10 +13,7 @@ def send_email_async(flask_app: Flask, email_sender: SendenEmail, subject: str, 
                 flask_app.logger.info("Sending email to %s ...", recipients)
                 email_sender.Send(subject, body, recipients, sender=sender)
                 flask_app.logger.info("Email sent successfully")
-        except Exception as e:
-            try:
-                flask_app.logger.exception(f"Failed to send email:", e)
-            except Exception:
-                print(f"Failed to send email: {str(e)}")
-
+        except Exception:
+                flask_app.logger.exception("Failed to log email sending error")
+    
     _executor.submit(_task)
