@@ -17,10 +17,9 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 db.init_app(app)
 tolgge = TolggeManager(api_key=os.getenv('TOLGEE_API_KEY'), default_lang='en-US')
 
-# --- EMAIL por API HTTP (SendGrid) ---
-SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")   # <- crea en Railway
-FROM_EMAIL       = os.getenv("MAIL_USERNAME")         # <- remitente verificado en SendGrid
-TO_EMAIL         = os.getenv("MAIL_USERNAME")  # <- destino (puede ser el mismo)
+SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
+FROM_EMAIL       = os.getenv("MAIL_USERNAME")     
+TO_EMAIL         = os.getenv("MAIL_USERNAME")  
 
 def send_email_async(subject: str, body: str, to_email: str):
     """Envía email por HTTP (SendGrid) en background; no bloquea el POST."""
