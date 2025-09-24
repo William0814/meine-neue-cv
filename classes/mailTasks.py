@@ -1,9 +1,14 @@
 from concurrent.futures import ThreadPoolExecutor
+import os
 from typing import List, Optional
 from flask import Flask, current_app
 from .emailSender import SendenEmail
 
 
+MAILGUN_API_KEY = os.getenv("MG_API_KEY")    # en Railway
+MAILGUN_DOMAIN  = os.getenv("MG_DOMAIN")     # ej: mg.tudominio.com
+FROM_EMAIL      = os.getenv("MAIL_USERNAME")    # remitente autorizado en el dominio
+TO_EMAIL        = os.getenv("MAIL_USERNAME")
 _executor = ThreadPoolExecutor(max_workers=2)
 def send_email_async(flask_app: Flask, email_sender: SendenEmail, subject: str, body: str, recipients: List[str], sender: Optional[str] = None) -> None:
     
