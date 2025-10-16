@@ -1,348 +1,343 @@
 <!DOCTYPE HTML>
 <html lang="{{ tolgee_lang }}">
-	<head>
-		<title>Experience</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-		<!--Favicon and styles CSS-->
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/images/favicon-32x32.png' )}}" />
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/images/favicon-16x16.png') }}"/>
-		<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
 
-		<link rel="stylesheet" href="{{ url_for_lang('static', filename='assets/css/main.css')}}"/>
-		<noscript><link rel="stylesheet" href="{{ url_for_lang('static', filename='assets/css/noscript.css')}}" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>Experience</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!--Favicon and styles CSS-->
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="{{ url_for('static', filename='assets/images/apple-touch-icon.png') }}" />
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="{{ url_for('static', filename='assets/images/favicon-32x32.png' )}}" />
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="{{ url_for('static', filename='assets/images/favicon-16x16.png') }}" />
+	<link rel="manifest" href="{{ url_for( 'static', filename='assets/json/site.webmanifest' )}}" />
 
-				<!-- Header -->
-				<!-- Note: The "styleN" class below should match that of the banner element. -->
-					<header id="header" class="alt">
-						<a href="{{ url_for_lang('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+	<link rel="stylesheet" href="{{ url_for_lang('static', filename='assets/css/main.css')}}" />
+	<noscript>
+		<link rel="stylesheet" href="{{ url_for_lang('static', filename='assets/css/noscript.css')}}" />
+	</noscript>
+</head>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="{{ url_for_lang('home')}}" data-i18n="about-li-home">Home</a></li>
-							<li><a href="{{ url_for_lang('about_me')}}" data-i18n="home-menu-about">About Me</a></li>
-							<li><a href="{{ url_for_lang('studies')}}" data-i18n="home-h3-studies">Studies</a></li>
-							<li><a href="{{ url_for_lang('home')}}#contact" data-i18n="home-menu-cont">Contact Me</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit" data-i18n="home-li-get">Get Started</a></li>
-						</ul>
-					</nav>
+<body class="is-preload">
 
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="alt">
-						<div class="inner">
-							<span class="image">
-								<img src="{{ url_for('static', filename='assets/images/fondo_java.jpg')}}" alt="" />
-							</span>
-							<header class="major">
-								<h1 data-i18n="home-h3-exp">Experience</h1>
-							</header>
-							<div class="content">
-								<p></p>
-							</div>
-						</div>
-					</section>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Main -->
-					<div id="main">
+		<!-- Header -->
+		<!-- Note: The "styleN" class below should match that of the banner element. -->
+		<header id="header" class="alt">
+			<a href="{{ url_for_lang('home')}}" class="logo"><strong>CV</strong> <span>William Rodriguez</span></a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h2 data-i18n="expe-h2-dev">Dev Projects and Company Experience</h2>
-									</header>
-									<p></p>
-								</div>
-							</section>
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="{{ url_for_lang('home')}}" data-i18n="about-li-home">Home</a></li>
+				<li><a href="{{ url_for_lang('about_me')}}" data-i18n="home-menu-about">About Me</a></li>
+				<li><a href="{{ url_for_lang('studies')}}" data-i18n="home-h3-studies">Studies</a></li>
+				<li><a href="{{ url_for_lang('home')}}#contact" data-i18n="home-menu-cont">Contact Me</a></li>
+			</ul>
+			<ul class="actions stacked">
+				<li><a href="#" class="button primary fit" data-i18n="home-li-get">Get Started</a></li>
+			</ul>
+		</nav>
 
-						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a href="https://poliedrosoftware.com/" target="_blank" class="image">
-										<img src="{{ url_for('static', filename='assets/images/poliedro.jpeg')}}" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Poliedro Software S.A.S</h3>
-											</header>
-											<p data-i18n="expe-p-current">(current) I currently work freelance or on projects with this
-												company as a back-end developer, implementing technologies such as .NET
-												and .NET/MAUI, MySQL, in memory query management with Redis, Docker, AWS,
-												and Azure for deployments. As a project manager, I manage Azure DevOps
-												and Git and Git Extension for version control. The entire product is 
-												built on a hexagonal and microservices architecture for greater quality 
-												control when exposing endpoints. </p>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="https://tae-sas.com/" target="_blank" class="image">
-										<img src="{{ url_for('static', filename='assets/images/tae.png')}}" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Tae Ltda</h3>
-											</header>
-											<p data-i18n="expe-p-tae">(05/2023 - 01/2024) A company providing administrative and accounting
-												software for the real estate sector. I worked as a National Support and
-												Implementation Analyst. My responsibilities included: Providing technical
-												support nationwide remotely, by phone, and in person. Registering and
-												managing tickets in the CRM, ensuring quality and customer satisfaction.
-												Monitoring and following up on tickets with low ratings. Coordinating and
-												attending training sessions and service optimization meetings. Performing
-												software updates and maintenance for SIMI®. Managing databases following
-												established protocols. Executing software implementations, ensuring
-												compliance with procedures. Documenting activities and ensuring customer
-												satisfaction after each implementation. Coordinating the resolution of
-												requests, complaints, and suggestions (PQRS) with the relevant areas.</p>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="https://spagrupoinmobiliario.com/" target="_blank" class="image">
-										<img src="{{ url_for('static', filename='assets/images/spa.png')}}" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3 data-i18n="expe-h3-spa">SPA real estate group</h3>
-											</header>
-											<p data-i18n="expe-p-resume-spa">  (12/2022 - 05/2023) One of the largest real estate companies in Colombia,
-												where I worked as an IT Analyst. My main responsibilities included: Ensuring
-												the functionality and availability of corporate applications. Supporting
-												vendors in the implementation of technology projects. Training users in the
-												use of technological tools. Coordinating the resolution of incidents with
-												suppliers. Evaluating and proposing improvements in IT infrastructure.
-												Overseeing the proper functioning of the company’s website and technological
-												resources. Developing corporate software with Power Platform.</p>
-										</div>
-									</div>
-								</section>
-							
-								<section>
-									<a href="https://rys.com.co/" target="_blank" class="image">
-										<img src="{{ url_for('static', filename='assets/images/rys.jpg')}}" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>R&S Solutions</h3>
-											</header>
-												<p data-i18n="expe-p-rys">(11/2020 - 11/2022) A company specializing in technical support, both remote
-													and on-site. For almost two years, my responsibilities included: Computer
-													technical support and maintenance. Software installation and configuration.
-													Network administration and configuration. System maintenance and management.</p>
-										</div>
-									</div>
-								</section>
-							</section>
-
-						<!-- Three -->
-							<section id="three">
-								<div class="inner">
-									<header class="major">
-										<h2 data-i18n="home-p-backen">EDS App Backend Robust and Scalable Architecture for Service Stations</h2>
-									</header>
-									<p data-i18n="expe-p-backend">
-										The backend of EDS App is built with ASP.NET Core, following a hexagonal architecture
-										to ensure clean, decoupled, and maintainable code. It uses JWT for secure token-based
-										authentication and exposes REST APIs documented with Swagger. The solution is optimized 
-										for production using Redis for caching, Docker for containerization and portable deployment,
-										and AWS as the cloud platform. GitHub Actions automates the CI/CD pipelines. All
-										development and orchestration are handled through Visual Studio, providing high
-										productivity and full control over the development lifecycle. My role involved 
-										contributing to the full development lifecycle as part of a collaborative team—designing
-										the architecture, implementing backend and mobile services, configuring automated
-										testing and CI/CD pipelines, and ensuring security and cloud readiness.
-									</p>
-									<ul class="icons">
-										<li><a href="https://github.com/PoliedroSoftware/backend-api-eds.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-									</ul>
-								</div>
-							</section>
-							<section id="three1">
-								<div class="inner">
-									<header class="major">
-										<h2 data-i18n="home-p-eds">EDS App Smart System for Service Stations</h2>
-									</header>
-									<p data-i18n="expe-p-frontend" style="white-space: pre-line;">
-										EDS App is a modern application built with .NET MAUI to manage service
-										stations. It follows a hexagonal architecture to keep the code clean and
-										decoupled. Technologies such as Appium are used for mobile test automation,
-										Tolgge for UI and translation management, and GitHub Actions for CI/CD.
-										The system is designed for robust testing on both Android and Windows,
-										using a platform-based structure, design patterns like DriverManager,
-										and reusable components. My role involved full architecture development,
-										test automation, continuous integration, and workflow optimization following
-										software engineering best practices.
-										To test the product:
-										User: islander
-										Password: islander
-									</p>
-									<ul class="icons">
-										<li><a href="https://github.com/PoliedroSoftware/app-eds.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="https://drive.google.com/file/d/1EfDgCz8BcI7H16o7kVJQ19b9fKNl5EcS/view?usp=sharing" target="_blank" class="icon brands alt fa-android"><span class="label">Android</span></a></li>
-									</ul>
-								</div>
-							</section>
-							<section id="three2">
-								<div class="inner">
-									<header class="major">
-										<h2 data-i18n="home-p-micro">Users and Task Microservices</h2>
-									</header>
-									<p data-i18n="expe-p-user-task">
-										This system is built using a microservices architecture with Spring Boot and Spring Cloud.
-										It currently includes services such as user and task management, which communicate through
-										Feign Client for decoupled and efficient integration. Eureka enables dynamic service
-										discovery, while Config Server provides centralized configuration. An API Gateway serves
-										as the main entry point, simplifying routing and enhancing security. The project is under
-										active development as part of a collaborative effort, with a clear roadmap to scale by
-										adding more services and features in the near future.
-									</p>
-									<ul class="icons">
-										<li><a href="https://github.com/MicroServices-Arquitecture" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-									</ul>
-								</div>
-							</section>
-							<section id="three3">
-								<div class="inner">
-									<header class="major">
-										<h2 data-i18n="expe-h2-product">Products-Microservice</h2>
-									</header>
-									<p data-i18n="expe-p-product">
-										ms-product is a microservice developed with Spring Boot, responsible for
-										product management within a microservices architecture. It offers a full
-										set of CRUD operations (Create, Read, Update, Delete), enabling efficient
-										and scalable handling of product data in a modular environment.
-									</p>
-									<ul class="icons">
-										<li><a href="https://github.com/William0814/products-microservices.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-									</ul>
-								</div>
-							</section>
-							<section id="three4">
-								<div class="inner">
-									<header class="major">
-										<h2 data-i18n="expe-h2-weather">Would you like to know the weather of any city?</h2>
-									</header>
-									<p data-i18n="expe-p-weather">
-										This small app displays the weather forecast for any city over the next 5 days.
-										It is built using Streamlit, Requests, and Plotly. The app relies on an API that
-										provides worldwide weather data, offering an interactive view of sho
-									</p>
-									<ul class="icons">
-										<li><a href="https://github.com/William0814/Weather-city-app.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="https://weather-city-app-william-rodriguez.streamlit.app/" target="_blank" class="icon solid alt fa-globe"><span class="label">Link</span></a></li>
-									</ul>
-								</div>
-							</section>
-							<section id="three5">
-								<div class="inner">
-									<header class="major">
-										<h2 data-i18n="expe-h2-nasa">NASA API RestFull</h2>
-									</header>
-									<p data-i18n="expe-p-nasa">
-										This app consumes a NASA API and displays a new space-related topic every day,
-										such as a star, celestial body, planet, or other astronomical phenomena. It's
-										a simple and visual way to learn something new about the universe each day.
-									</p>
-									<ul class="icons">
-										<li><a href="https://github.com/William0814/Student-Project-API-NASA.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="https://project-api-nasa.streamlit.app/" target="_blank" class="icon solid alt fa-globe"><span class="label">Link</span></a></li>
-									</ul>
-								</div>
-							</section>
-							<section id="three6">
-								<div class="inner">
-									<header class="major">
-										<h2 data-i18n="expe-h2-static">Static Page</h2>
-									</header>
-									<p data-i18n="expe-p-static">
-										This small project is a tribute page to the city of Heidelberg, one
-										of my favorite cities in Germany. Its infrastructure and culture are
-										truly fascinating. The app is built entirely in Python, using the
-										Streamlit library for interactivity and design. Below, you'll find
-										the link to the deployed app and the GitHub repository. I hope you enjoy it!
-									</p>
-									<ul class="icons">
-										<li><a href="https://github.com/William0814/Heidelberg_page.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="https://heidelbergpage-landing-page.streamlit.app/" target="_blank" class="icon solid alt fa-globe"><span class="label">Link</span></a></li>
-									</ul>
-								</div>
-							</section>
-							<section id="three7">
-								<div class="inner">
-									<header class="major">
-										<h2 data-i18n="expe-h2-gui">GUI Desktop App</h2>
-									</header>
-									<p data-i18n="expe-p-gui">
-										This is a small yet functional desktop text editor developed in Python.
-										It features an intuitive graphical interface and supports basic text
-										management operations. Although designed as a beginner-friendly project,
-										it is well-structured and follows solid development practices. The app
-										was built using the FreeSimpleGUI library, providing a smooth user experience.
-									</p>
-									<ul class="icons">
-										<li><a href="https://github.com/William0814/employs_native_app.git" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="{{url_for('static', filename='assets/apk/gui_windows.exe')}}" target="_blank" class="icon brands alt fa-windows"><span class="label">Link</span></a></li>
-										<li><a href="{{url_for('static', filename='assets/apk/gui_linux')}}" target="_blank" class="icon brands alt fa-linux"><span class="label">Link</span></a></li>
-									</ul>
-								</div>
-							</section>						
-						</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://www.facebook.com/willi.rodriguezzzz" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://github.com/William0814" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/william-rodríguez-5533901a6" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="http://wa.me/+4917620692862" target="_blank" class="icon brands alt fa-whatsapp"><span class="label">Whatsapp</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li data-i18n="home-li-2025">&copy; 2025, all rights reserved</li><li data-i18n="home-li-dev">Developed by: <a href="">Ing. William Rodriguez</a></li>
-							</ul>
-						</div>
-					</footer>
+		<!-- Banner -->
+		<!-- Note: The "styleN" class below should match that of the header element. -->
+		<section id="banner" class="alt">
+			<div class="inner">
+				<span class="image">
+					<img src="{{ url_for('static', filename='assets/images/fondo_java.jpg')}}" alt="" />
+				</span>
+				<header class="major">
+					<h1 data-i18n="home-h3-exp">Experience</h1>
+				</header>
+				<div class="content">
+					<p></p>
+				</div>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-		 <script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
-			<script>
-			// Inyectamos la config desde Flask al frontend
-			window.tolgeeConfig = {
-				apiKey: "{{ tolgee_api_key }}",
-				apiUrl: "{{ tolgee_api_url }}",
-				language: "{{ tolgee_lang }}"
-			};
-			</script>
-			<script src="{{ url_for_lang('static', filename='assets/js/tolgge-init.js') }}"></script>
+		<!-- Main -->
+		<div id="main">
 
-			<script src="static/assets/js/jquery.min.js"></script>
-			<script src="static/assets/js/jquery.scrolly.min.js"></script>
-			<script src="static/assets/js/jquery.scrollex.min.js"></script>
-			<script src="static/assets/js/browser.min.js"></script>
-			<script src="static/assets/js/breakpoints.min.js"></script>
-			<script src="static/assets/js/util.js"></script>
-			<script src="static/assets/js/main.js"></script>
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h2 data-i18n="expe-h2-dev">Dev Projects and Company Experience</h2>
+					</header>
+					<p></p>
+				</div>
+			</section>
 
-	</body>
+			<!-- Two -->
+			<section id="two" class="spotlights">
+				<section>
+					<a href="https://poliedrosoftware.com/" target="_blank" class="image">
+						<img src="{{ url_for('static', filename='assets/images/poliedro.jpeg')}}" alt=""
+							data-position="center center" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>Poliedro Software S.A.S</h3>
+							</header>
+							<p data-i18n="expe-p-current">(current) I currently work freelance or on projects with this
+								company as a back-end developer, implementing technologies such as .NET
+								and .NET/MAUI, MySQL, in memory query management with Redis, Docker, AWS,
+								and Azure for deployments. As a project manager, I manage Azure DevOps
+								and Git and Git Extension for version control. The entire product is
+								built on a hexagonal and microservices architecture for greater quality
+								control when exposing endpoints. </p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<a href="https://tae-sas.com/" target="_blank" class="image">
+						<img src="{{ url_for('static', filename='assets/images/tae.png')}}" alt=""
+							data-position="top center" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>Tae Ltda</h3>
+							</header>
+							<p data-i18n="expe-p-tae">(05/2023 - 01/2024) A company providing administrative and
+								accounting
+								software for the real estate sector. I worked as a National Support and
+								Implementation Analyst. My responsibilities included: Providing technical
+								support nationwide remotely, by phone, and in person. Registering and
+								managing tickets in the CRM, ensuring quality and customer satisfaction.
+								Monitoring and following up on tickets with low ratings. Coordinating and
+								attending training sessions and service optimization meetings. Performing
+								software updates and maintenance for SIMI®. Managing databases following
+								established protocols. Executing software implementations, ensuring
+								compliance with procedures. Documenting activities and ensuring customer
+								satisfaction after each implementation. Coordinating the resolution of
+								requests, complaints, and suggestions (PQRS) with the relevant areas.</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<a href="https://spagrupoinmobiliario.com/" target="_blank" class="image">
+						<img src="{{ url_for('static', filename='assets/images/spa.png')}}" alt=""
+							data-position="25% 25%" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3 data-i18n="expe-h3-spa">SPA real estate group</h3>
+							</header>
+							<p data-i18n="expe-p-resume-spa"> (12/2022 - 05/2023) One of the largest real estate
+								companies in Colombia,
+								where I worked as an IT Analyst. My main responsibilities included: Ensuring
+								the functionality and availability of corporate applications. Supporting
+								vendors in the implementation of technology projects. Training users in the
+								use of technological tools. Coordinating the resolution of incidents with
+								suppliers. Evaluating and proposing improvements in IT infrastructure.
+								Overseeing the proper functioning of the company’s website and technological
+								resources. Developing corporate software with Power Platform.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<a href="https://rys.com.co/" target="_blank" class="image">
+						<img src="{{ url_for('static', filename='assets/images/rys.jpg')}}" alt=""
+							data-position="25% 25%" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>R&S Solutions</h3>
+							</header>
+							<p data-i18n="expe-p-rys">(11/2020 - 11/2022) A company specializing in technical support,
+								both remote
+								and on-site. For almost two years, my responsibilities included: Computer
+								technical support and maintenance. Software installation and configuration.
+								Network administration and configuration. System maintenance and management.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<!-- Three -->
+			<section id="three">
+				<div class="inner">
+					<header class="major">
+						<h2>Landing Page Dr. Susana Oder-Peña</h2>
+					</header>
+					<p data-i18n="expe-p-landing-susana">
+					</p>
+					<ul class="icons">
+						<li><a href="https://github.com/William0814/landing-susana.git" target="_blank"
+								class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://landing-susana-production.up.railway.app/" target="_blank"
+								class="icon solid alt fa-globe"><span class="label">Link</span></a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="three">
+				<div class="inner">
+					<header class="major">
+						<h2 data-i18n="home-p-backen">EDS App Backend Robust and Scalable Architecture for Service
+							Stations</h2>
+					</header>
+					<p data-i18n="expe-p-backend">
+					</p>
+					<ul class="icons">
+						<li><a href="https://github.com/PoliedroSoftware/backend-api-eds.git" target="_blank"
+								class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="three1">
+				<div class="inner">
+					<header class="major">
+						<h2 data-i18n="home-p-eds">EDS App Smart System for Service Stations</h2>
+					</header>
+					<p data-i18n="expe-p-frontend" style="white-space: pre-line;"></p>
+					<ul class="icons">
+						<li><a href="https://github.com/PoliedroSoftware/app-eds.git" target="_blank"
+								class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://play.google.com/store/apps/details?id=com.companyname.app.EDS&pcampaignid=web_share"
+								target="_blank" class="icon brands alt fa-android"><span
+									class="label">Android</span></a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="three2">
+				<div class="inner">
+					<header class="major">
+						<h2 data-i18n="home-p-micro">Users and Task Microservices</h2>
+					</header>
+					<p data-i18n="expe-p-user-task"></p>
+					<ul class="icons">
+						<li><a href="https://github.com/MicroServices-Arquitecture" target="_blank"
+								class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="three3">
+				<div class="inner">
+					<header class="major">
+						<h2 data-i18n="expe-h2-product">Products-Microservice</h2>
+					</header>
+					<p data-i18n="expe-p-product"></p>
+					<ul class="icons">
+						<li><a href="https://github.com/William0814/products-microservices.git" target="_blank"
+								class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="three4">
+				<div class="inner">
+					<header class="major">
+						<h2 data-i18n="expe-h2-weather">Would you like to know the weather of any city?</h2>
+					</header>
+					<p data-i18n="expe-p-weather"></p>
+					<ul class="icons">
+						<li><a href="https://github.com/William0814/Weather-city-app.git" target="_blank"
+								class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://weather-city-app-william-rodriguez.streamlit.app/" target="_blank"
+								class="icon solid alt fa-globe"><span class="label">Link</span></a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="three5">
+				<div class="inner">
+					<header class="major">
+						<h2 data-i18n="expe-h2-nasa">NASA API RestFull</h2>
+					</header>
+					<p data-i18n="expe-p-nasa"></p>
+					<ul class="icons">
+						<li><a href="https://github.com/William0814/Student-Project-API-NASA.git" target="_blank"
+								class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://project-api-nasa.streamlit.app/" target="_blank"
+								class="icon solid alt fa-globe"><span class="label">Link</span></a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="three6">
+				<div class="inner">
+					<header class="major">
+						<h2 data-i18n="expe-h2-static">Static Page</h2>
+					</header>
+					<p data-i18n="expe-p-static"></p>
+					<ul class="icons">
+						<li><a href="https://github.com/William0814/Heidelberg_page.git" target="_blank"
+								class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://heidelbergpage-landing-page.streamlit.app/" target="_blank"
+								class="icon solid alt fa-globe"><span class="label">Link</span></a></li>
+					</ul>
+				</div>
+			</section>
+			<section id="three7">
+				<div class="inner">
+					<header class="major">
+						<h2 data-i18n="expe-h2-gui">GUI Desktop App</h2>
+					</header>
+					<p data-i18n="expe-p-gui"></p>
+					<ul class="icons">
+						<li><a href="https://github.com/William0814/employs_native_app.git" target="_blank"
+								class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="{{url_for('static', filename='assets/apk/gui_windows.exe')}}" target="_blank"
+								class="icon brands alt fa-windows"><span class="label">Link</span></a></li>
+						<li><a href="{{url_for('static', filename='assets/apk/gui_linux')}}" target="_blank"
+								class="icon brands alt fa-linux"><span class="label">Link</span></a></li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://www.facebook.com/willi.rodriguezzzz" target="_blank"
+							class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://github.com/William0814" target="_blank" class="icon brands alt fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/william-rodríguez-5533901a6" target="_blank"
+							class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="http://wa.me/+4917620692862" target="_blank" class="icon brands alt fa-whatsapp"><span
+								class="label">Whatsapp</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li data-i18n="home-li-2025">&copy; 2025, all rights reserved</li>
+					<li data-i18n="home-li-dev">Developed by: <a href="">Ing. William Rodriguez</a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/@tolgee/web/dist/tolgee-web.umd.min.js"></script>
+	<script>
+		// Inyectamos la config desde Flask al frontend
+		window.tolgeeConfig = {
+			apiKey: "{{ tolgee_api_key }}",
+			apiUrl: "{{ tolgee_api_url }}",
+			language: "{{ tolgee_lang }}"
+		};
+	</script>
+	<script src="{{ url_for_lang('static', filename='assets/js/tolgge-init.js') }}"></script>
+
+	<script src="static/assets/js/jquery.min.js"></script>
+	<script src="static/assets/js/jquery.scrolly.min.js"></script>
+	<script src="static/assets/js/jquery.scrollex.min.js"></script>
+	<script src="static/assets/js/browser.min.js"></script>
+	<script src="static/assets/js/breakpoints.min.js"></script>
+	<script src="static/assets/js/util.js"></script>
+	<script src="static/assets/js/main.js"></script>
+
+</body>
+
 </html>
