@@ -1,4 +1,4 @@
-# 🧠 Ingeniero William – CV Web App
+# 🧠 Engineer William – CV Web App
 
 A web application built with **Flask**, **MySQL**, and a clean **HTML/CSS/JS** frontend to showcase my **professional résumé** in a dynamic, multilingual, and scalable way. Deployed locally (WSL/Ubuntu) and prepared for cloud deployment.
 
