@@ -17,7 +17,7 @@ bleach==6.2.0
 blinker==1.9.0
 cachetools==5.5.2
 certifi==2020.6.20
-cffi==1.17.1
+cffi==2.0.0
 chardet==4.0.0
 charset-normalizer==3.4.1
 click==8.2.1
@@ -27,7 +27,7 @@ comm==0.2.2
 command-not-found==0.3
 configobj==5.0.6
 constantly==15.1.0
-cryptography==3.4.8
+cryptography==46.0.5
 dbus-python==1.2.18
 debugpy==1.8.8
 decorator==5.1.1
@@ -182,7 +182,7 @@ tqdm==4.67.1
 traitlets==5.14.3
 Twisted==22.1.0
 types-python-dateutil==2.9.0.20241206
-typing_extensions==4.12.2
+typing_extensions==4.15.0
 tzdata==2025.1
 ubuntu-pro-client==8001
 ufw==0.36.1
