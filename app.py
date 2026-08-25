@@ -17,31 +17,37 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 db.init_app(app)
 tolgge = TolggeManager(api_key=os.getenv('TOLGEE_API_KEY'), default_lang='en-US')
 
-SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
-FROM_EMAIL       = os.getenv("MAIL_USERNAME")     
-TO_EMAIL         = os.getenv("MAIL_USERNAME")  
+RESEND_API_KEY = os.getenv("RESEND_API_KEY")
+FROM_EMAIL       = os.getenv("MAIL_FROM")     
+TO_EMAIL         = os.getenv("MAIL_TO")  
 
-def send_email_async(subject: str, body: str, to_email: str):
+def send_email_async(subject: str, body: str, reply_email: str):
     """Envía email por HTTP (SendGrid) en background; no bloquea el POST."""
     try:
-        r = requests.post(
-            "https://api.sendgrid.com/v3/mail/send",
+        response = requests.post(
+            "https://api.resend.com/emails",
             headers={
-                "Authorization": f"Bearer {SENDGRID_API_KEY}",
+                "Authorization": f"Bearer {RESEND_API_KEY}",
                 "Content-Type": "application/json",
             },
             json={
-                "personalizations": [{"to": [{"email": to_email}]}],
-                "from": {"email": FROM_EMAIL},
+                "from": FROM_EMAIL,
+                "to": [TO_EMAIL],
                 "subject": subject,
-                "content": [{"type": "text/plain", "value": body}],
+                "text": body,
+                "reply_to": reply_email
             },
             timeout=10,
         )
-        if r.status_code not in (200, 202):
-            app.logger.error("SendGrid error %s: %s", r.status_code, r.text)
-    except Exception:
-        app.logger.exception("Failed to send email (SendGrid)")
+        if not response.ok:
+            app.logger.error(
+                "Resend error %s: %s",
+                response.status_code,
+                response.text,
+            )   
+        response.raise_for_status()
+    except requests.RequestException as e:
+        app.logger.error("Failed to send email: %s", e)
 
 @app.context_processor
 def inject_url_for_lang():
@@ -68,7 +74,7 @@ def home():
 
         body = f"Name: {name}\nEmail: {email}\nMessage: {message}"
         Thread(target=send_email_async,
-               args=("New Message from your CV!!", body, TO_EMAIL),
+               args=("New Message from your CV!!", body, email),
                daemon=True).start()
 
         flash(f"Hi {name}, your message has been sent successfully!", "success")
